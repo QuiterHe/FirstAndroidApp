@@ -1,16 +1,11 @@
 package com.example.hezhang.firstapp;
 
-import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.View;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,30 +13,54 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        Log.v("point1", "point1");
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // activity 跳转
-                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-                String data = "Hello, about page";
-                intent.putExtra("extra_data", data);
-
-
-                startActivity(intent);
-
-                // Toast
-//                Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_LONG).show();
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-                Log.v("point2", "point2");
-            }
-        });
-        Log.v("point3", "point4");
+//        Display display = getWindowManager().getDefaultDisplay();
+//        Point point = new Point();
+//        display.getSize(point);
+//        if( point.x > point.y ) {
+//            Fragment1 fragment1 = new Fragment1();
+//            getFragmentManager().beginTransaction().replace(R.id.main_layout, fragment1).commit();
+//        } else {
+//            Fragment2 fragment2 = new Fragment2();
+//            getFragmentManager().beginTransaction().replace(R.id.main_layout, fragment2).commit();
+//        }
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        int j = 0;
+//        if( j > 0) {
+//            Log.v("a", "a");
+//        }
+//        Log.v("point1", "point1");
+//       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // activity 跳转
+//                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+//                String data = "Hello, about page";
+//                intent.putExtra("extra_data", data);
+//
+//
+//                startActivity(intent);
+//
+//                // Toast
+////                Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_LONG).show();
+////                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+////                        .setAction("Action", null).show();
+//                Log.v("point2", "point2");
+//            }
+//        });
+//        for (int i = 0; i < 10; i++) {
+////获取当前i的值
+//            int selector = i;
+//            //打log查看当前i的值（此步多余，实际开发请忽略）
+//            String str = "for当前的i的值：" + i;
+//            Log.v("i", str);
+//            //调用方法
+////            stepNext(i);
+//        }
+//        Log.v("point3", "point4");
     }
 
     @Override
